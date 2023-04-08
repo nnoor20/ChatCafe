@@ -12,7 +12,7 @@ def homepage():
     time = datetime.datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
     return f"""
-    <h1>Homepage.</h1>
+    <h1>CS3250 Final Project</h1>
     <p>It is currently {time}.</p>
     """
 
