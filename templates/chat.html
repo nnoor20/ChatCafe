@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MSU Study Chat Lounge</title>
+    <style>
+        #chat {
+            height: 300px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the MSU Study Chat Lounge, {{ username }}!</h1>
+    <p>This is where MSU students can connect and study together.</p>
+    <hr>
+    <h2>Chat</h2>
+    <div id="chat">
+        {% for username, message in messages %}
+            <p><strong>{{ username }}:</strong> {{ message }}</p>
+        {% endfor %}
+    </div>
+    <form method="POST" action="/send">
+        <label for="message">Enter a message:</label>
+        <input type="text" id="message" name="message">
+        <input type="hidden" id="username" name="username" value="{{ username }}">
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>

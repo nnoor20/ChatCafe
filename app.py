@@ -1,20 +1,23 @@
-from flask import Flask, render_template
-import datetime
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-@app.route('/<string:page_name>/')
-def render_static(page_name):
-    return render_template('%s.html' % page_name)
+# List to store chat messages
+messages = []
 
-@app.route('/')
-def homepage():
-    time = datetime.datetime.now().strftime("%A, %d %b %Y %l:%M %p")
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        username = request.form['username']
+        return render_template('chat.html', username=username, messages=messages)
+    return render_template('index.html')
 
-    return f"""
-    <h1>CS3250 Final Project</h1>
-    <p>It is currently {time}.</p>
-    """
+@app.route('/send', methods=['POST'])
+def send():
+    message = request.form['message']
+    username = request.form['username']
+    messages.append((username, message))
+    return render_template('chat.html', username=username, messages=messages)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
