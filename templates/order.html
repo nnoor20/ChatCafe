@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+  </head>
+  <body>
+    <h1>Order Confirmation</h1>
+    {% if message %}
+      <p>{{ message }}</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Return to menu</a>
+  </body>
+</html>
