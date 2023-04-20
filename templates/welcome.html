@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cafe Menu</title>
+  </head>
+  <body>
+    <h1>Welcome to MSU Denver Chat Cafe</h1>
+    <p>Please enter your name and student ID below:</p>
+    <form method="POST" action="{{ url_for('order') }}">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name"><br>
+      <label for="student_id">Student ID:</label>
+      <input type="text" name="student_id" id="student_id"><br><br>
+      {% for item, data in menu.items() %}
+        <input type="checkbox" name="items" value="{{ item }}">{{ item.title() }} - ${{ data.price }}<br>
+        <i>{{ data.description }}</i><br><br>
+      {% endfor %}
+      <input type="submit" value="Order">
+    </form>
+  </body>
+</html>
