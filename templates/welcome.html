@@ -2,21 +2,57 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Cafe Menu</title>
+    <title>MSU Denver Chat Cafe</title>
+    <!-- Link to an external CSS file for styling -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
-    <h1>Welcome to MSU Denver Chat Cafe</h1>
-    <p>Please enter your name and student ID below:</p>
-    <form method="POST" action="{{ url_for('order') }}">
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name"><br>
-      <label for="student_id">Student ID:</label>
-      <input type="text" name="student_id" id="student_id"><br><br>
-      {% for item, data in menu.items() %}
-        <input type="checkbox" name="items" value="{{ item }}">{{ item.title() }} - ${{ data.price }}<br>
-        <i>{{ data.description }}</i><br><br>
-      {% endfor %}
-      <input type="submit" value="Order">
-    </form>
+    <header>
+      <h1>MSU Denver Chat Cafe</h1>
+      <nav>
+        <!-- Navigation links to different sections of the page -->
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to MSU Denver Chat Cafe, the perfect spot for MSU Roadrunners to enjoy a cup of coffee and some delicious pastries while catching up with friends or studying for exams.</p>
+        <p>Our cozy and inviting atmosphere is sure to make you feel right at home, and our friendly staff is always ready to serve you with a smile.</p>
+        <!-- Invite customers to join a study chat after placing an order -->
+        <p>Make sure to join the study chat after you place you order to catch up or study with other MSU Denver Students</p>
+      </section>
+      <section id="menu">
+        <h2>Menu</h2>
+        <p>Please enter your name and student ID below:</p>
+        <!-- Form for ordering items, with checkboxes generated dynamically from a menu dictionary -->
+        <form method="POST" action="{{ url_for('order') }}">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name"><br>
+          <label for="student_id">Student ID:</label>
+          <input type="text" name="student_id" id="student_id"><br><br>
+          {% for item, data in menu.items() %}
+            <input type="checkbox" name="items" value="{{ item }}">{{ item.title() }} - ${{ data.price }}<br>
+            <i>{{ data.description }}</i><br><br>
+          {% endfor %}
+          <input type="submit" value="Order">
+        </form>
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us with any questions or feedback you may have.</p>
+        <ul>
+          <!-- Contact information for the cafe, including email, phone, and address -->
+          <li>Email: chatcafe@msudenver.edu</li>
+          <li>Phone: 303-556-3991</li>
+          <li>Address: 890 Auraria Pkwy, Denver, CO 80204</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 MSU Denver Chat Cafe</p>
+    </footer>
   </body>
 </html>
