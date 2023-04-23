@@ -17,7 +17,7 @@ menu = {
 
 # Welcome page
 @app.route('/')
-def index():
+def welcome():
     return render_template('welcome.html', menu=menu)
 
 

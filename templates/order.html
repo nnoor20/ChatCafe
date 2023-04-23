@@ -10,7 +10,7 @@
       <h1>MSU Denver Chat Cafe</h1>
       <nav>
         <ul>
-          <li><a href="{{ url_for('index') }}">Menu</a></li>
+          <li><a href="{{ url_for('welcome') }}">Menu</a></li>
         </ul>
       </nav>
     </header>
@@ -19,7 +19,7 @@
       {% if message %}
         <p>{{ message }}</p>
       {% endif %}
-      <a href="{{ url_for('index') }}" class="return-btn">Return to menu</a>
+      <a href="{{ url_for('welcome') }}" class="return-btn">Return to menu</a>
     </main>
   </body>
 </html>
