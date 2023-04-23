@@ -1,7 +1,6 @@
 # CS 3250 Final Project 
 
-TODO: the project
+### Chat Cafe
 
-Branch test -Kyle 2222
-Branch test -Maria 
-Noora
+### Cafe menu
+
