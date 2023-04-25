@@ -1,29 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>MSU Study Chat Lounge</title>
-    <style>
-        #chat {
-            height: 300px;
-            overflow-y: scroll;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to the MSU Study Chat Lounge, {{ username }}!</h1>
-    <p>This is where MSU students can connect and study together.</p>
-    <hr>
-    <h2>Chat</h2>
-    <div id="chat">
-        {% for username, message in messages %}
-            <p><strong>{{ username }}:</strong> {{ message }}</p>
-        {% endfor %}
+{% extends 'base.html' %} {% block content %}
+<div class="message-box">
+  <h1>Welcome to the ChatCafe Lounge, {{ name }}!</h1>
+  <div class="messages" id="messages"></div>
+  <div class="inputs">
+    <input
+      type="text"
+      rows="3"
+      placeholder="Message"
+      name="message"
+      id="message"
+    />
+    <button type="button" name="send" id="send-btn" onClick="sendMessage()">
+      Send
+    </button>
+  </div>
+</div>
+<script type="text/javascript">
+  var socketio = io();
+
+  const messages = document.getElementById("messages");
+
+  const createMessage = (name, msg) => {
+    const content = `
+    <div class="text">
+        <span>
+            <strong>${name}</strong>: ${msg}
+        </span>
     </div>
-    <form method="POST" action="/send">
-        <label for="message">Enter a message:</label>
-        <input type="text" id="message" name="message">
-        <input type="hidden" id="username" name="username" value="{{ username }}">
-        <button type="submit">Send</button>
-    </form>
-</body>
-</html>
+    `;
+    messages.innerHTML += content;
+  };
+
+  socketio.on("message", (data) => {
+    createMessage(data.name, data.message);
+  });
+
+  const sendMessage = () => {
+    const message = document.getElementById("message");
+    if (message.value == "") return;
+    socketio.emit("message", { data: message.value });
+    message.value = "";
+  };
+</script>
+{% for msg in messages %}
+<script type="text/javascript">
+  createMessage("{{msg.name}}", "{{msg.message}}");
+</script>
+{% endfor %} {% endblock %}
