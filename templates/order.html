@@ -2,13 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Order Confirmation</title>
+    <title>Order Confirmation - MSU Denver Chat Cafe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
-    <h1>Order Confirmation</h1>
-    {% if message %}
-      <p>{{ message }}</p>
-    {% endif %}
-    <a href="{{ url_for('index') }}">Return to menu</a>
+    <header>
+      <h1>MSU Denver Chat Cafe</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('welcome') }}">Menu</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Order Confirmation</h2>
+      {% if message %}
+        <p>{{ message }}</p>
+      {% endif %}
+      <a href="{{ url_for('welcome') }}" class="return-btn">Return to menu</a>
+    </main>
   </body>
 </html>
