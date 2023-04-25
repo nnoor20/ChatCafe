@@ -23,7 +23,7 @@ def index():
             session["name"] = name
         return redirect(url_for("room"))
 
-    return render_template("index.html")
+    return render_template("home.html")
 
 @app.route("/chat")
 def room():
