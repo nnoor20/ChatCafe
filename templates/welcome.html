@@ -25,8 +25,68 @@
         <!-- Invite customers to join a study chat after placing an order -->
         <p>Make sure to join the study chat after you place you order to catch up or study with other MSU Denver Students</p>
       </section>
+
       <section id="menu">
         <h2>Menu</h2>
+          <div class="menu-grid">
+            {% for item, data in menu.items() %}
+            <div class="menu-item">
+              
+              <img src="{{ data.photo }}" alt="{{ item.title() }} photo">
+              <div class="menu-item-info">
+                <h3>{{ item.title() }}</h3>
+                <p>{{ data.description }}</p>
+                <p class="price">${{ data.price }}</p>
+                <label for="{{ item }}_quantity">Quantity:</label>
+                <input type="number" name="{{ item }}_quantity" id="{{ item }}_quantity" min="1" value="1">
+                <br>
+                <label for="{{ item }}_flavor">Flavor:</label>
+                <select name="{{ item }}_flavor" id="{{ item }}_flavor">
+                  <option value="None">Select a flavor</option>
+                  <option value="Regular">Chocolate</option>
+                  <option value="Vanilla">Vanilla</option>
+                  <option value="Mocha">Strawberry</option>
+                </select>
+                <br>
+                <label for="{{ item }}_size">Size:</label>
+                <select name="{{ item }}_size" id="{{ item }}_size">
+                  <option value="None">Select a size</option>
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
+                </select>
+              </div>
+              <input type="submit" value="Add To Order">
+            </div>
+          {% endfor %}
+          </div>
+        </form>
+      </section>
+
+      <section id="receipt">
+        <h2>Chat Cafe Receipt</h2>
+        <p>Date: {{ current_date }}</p>
+         <!--<p>Order Number: <span id="order-number"></span></p> -->
+         <p>Your order number is: {{ order_number }}</p>
+        
+         <table>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+          {% for item in items %}
+          <tr>
+            <td>{{ item }}</td>
+            <td>${{ menu[item]["price"] }}</td>
+          </tr>
+          {% endfor %}
+          <tr>
+            <td>Total</td>
+            <td>${{ total_price }}</td>
+          </tr>
+        </table>
+        
+        <p>Total: $<span id="total"></span></p>
         <p>Please enter your name and student ID below:</p>
         <!-- Form for ordering items, with checkboxes generated dynamically from a menu dictionary -->
         <form method="POST" action="{{ url_for('order') }}">
@@ -34,26 +94,28 @@
           <input type="text" name="name" id="name"><br>
           <label for="student_id">Student ID:</label>
           <input type="text" name="student_id" id="student_id"><br><br>
-          {% for item, data in menu.items() %}
-            <input type="checkbox" name="items" value="{{ item }}">{{ item.title() }} - ${{ data.price }}<br>
-            <i>{{ data.description }}</i><br><br>
-          {% endfor %}
-          <input type="submit" value="Order">
-        </form>
+          <button type="submit" id="place-order-button">Place Order</button>
       </section>
+
+
       <section id="contact">
         <h2>Contact Us</h2>
         <p>Feel free to reach out to us with any questions or feedback you may have.</p>
         <ul>
           <!-- Contact information for the cafe, including email, phone, and address -->
-          <li>Email: chatcafe@msudenver.edu</li>
-          <li>Phone: 303-556-3991</li>
-          <li>Address: 890 Auraria Pkwy, Denver, CO 80204</li>
+          <center>
+            <p>Email: chatcafe@msudenver.edu</p>
+            <p>Phone: 303-556-3991</p>
+            <p>Address: 890 Auraria Pkwy, Denver, CO 80204</p>
+            </center>
         </ul>
       </section>
+
     </main>
     <footer>
-      <p>&copy; 2023 MSU Denver Chat Cafe</p>
+      <center>
+        <p>&copy; 2023 MSU Denver Chat Cafe</p>
+      </center>
     </footer>
   </body>
 </html>
