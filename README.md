@@ -16,3 +16,5 @@
 
 - Then you can enter the chatroom and begin chatting
 
+.... how to commit!
+
