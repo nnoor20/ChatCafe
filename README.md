@@ -15,7 +15,3 @@
 - From the homepage you can select items and place your order
 
 - Then you can enter the chatroom and begin chatting
-
-.... how to commit!
-
-This is my Test for CF-6 - Caiden k.
