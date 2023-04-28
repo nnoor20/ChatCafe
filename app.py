@@ -14,18 +14,22 @@ socketio = SocketIO(app)
 
 # Menu items
 menu = {
-    "coffee": {"price": 2.99, "description": "Freshly brewed coffee"},
-    "latte": {"price": 3.99, "description": "Espresso with steamed milk and a layer of foam"},
-    "cappuccino": {"price": 3.49, "description": "Espresso with steamed milk and more foam than a latte"},
     "croissant": {"price": 2.49, "description": "Flaky pastry with buttery flavor"},
     "bagel": {"price": 1.99, "description": "Soft and chewy, great with cream cheese or jam"},
     "muffin": {"price": 2.99, "description": "Freshly baked, great for breakfast or snack"}
 }
 
+drinks = {
+    "coffee": {"price": 2.99, "description": "Freshly brewed coffee"},
+    "latte": {"price": 3.99, "description": "Espresso with steamed milk and a layer of foam"},
+    "cappuccino": {"price": 3.49, "description": "Espresso with steamed milk and more foam than a latte"} 
+}
+
+
 # Welcome page
 @app.route('/')
 def welcome():
-    return render_template('welcome.html', menu=menu)
+    return render_template('welcome.html', menu=menu, drinks=drinks)
 
 
 # Order page
@@ -36,7 +40,7 @@ def order():
         items = request.form.getlist('items')
         total_price = sum([menu[item]['price'] for item in items])
         message = f'Thank you for you order, {request.form["name"]} ({request.form["student_id"]})! Your order has been placed. Your total is ${total_price:.2f}.'
-    return render_template('order.html', menu=menu, message=message)
+    return render_template('order.html', menu=menu, drinks=drinks, message=message)
 
 
 ### Chat

@@ -25,14 +25,15 @@
         <!-- Invite customers to join a study chat after placing an order -->
         <p>Make sure to join the study chat after you place you order to catch up or study with other MSU Denver Students</p>
       </section>
-
+      
       <section id="menu">
         <h2>Menu</h2>
+        
           <div class="menu-grid">
             {% for item, data in menu.items() %}
             <div class="menu-item">
               
-              <img src="{{ data.photo }}" alt="{{ item.title() }} photo">
+              <img src="/static/menu_images/{{ item }}.png" alt="{{ item.title() }} photo">
               <div class="menu-item-info">
                 <h3>{{ item.title() }}</h3>
                 <p>{{ data.description }}</p>
@@ -43,26 +44,52 @@
                 <label for="{{ item }}_flavor">Flavor:</label>
                 <select name="{{ item }}_flavor" id="{{ item }}_flavor">
                   <option value="None">Select a flavor</option>
-                  <option value="Regular">Chocolate</option>
-                  <option value="Vanilla">Vanilla</option>
-                  <option value="Mocha">Strawberry</option>
+                  <option value="Regular">Plain</option>
+                  <option value="Toasted">Toasted</option>
+                  <option value="Jam">Jam</option>
                 </select>
                 <br>
-                <label for="{{ item }}_size">Size:</label>
-                <select name="{{ item }}_size" id="{{ item }}_size">
-                  <option value="None">Select a size</option>
-                  <option value="Small">Small</option>
-                  <option value="Medium">Medium</option>
-                  <option value="Large">Large</option>
-                </select>
+
               </div>
               <input type="submit" value="Add To Order">
             </div>
           {% endfor %}
+        
+          {% for item, data in drinks.items() %}
+          <div class="menu-item">
+            
+            <img src="/static/menu_images/{{ item }}.png" alt="{{ item.title() }} photo">
+            <div class="menu-item-info">
+              <h3>{{ item.title() }}</h3>
+              <p>{{ data.description }}</p>
+              <p class="price">${{ data.price }}</p>
+              <label for="{{ item }}_quantity">Quantity:</label>
+              <input type="number" name="{{ item }}_quantity" id="{{ item }}_quantity" min="1" value="1">
+              <br>
+              <label for="{{ item }}_flavor">Flavor:</label>
+              <select name="{{ item }}_flavor" id="{{ item }}_flavor">
+                <option value="None">Select a flavor</option>
+                <option value="Regular">Regular</option>
+                <option value="Vanilla">Vanilla</option>
+                <option value="Iced">Iced</option>
+              </select>
+              <br>
+              <label for="{{ item }}_size">Size:</label>
+              <select name="{{ item }}_size" id="{{ item }}_size">
+                <option value="None">Select a size</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+              </select>
+            </div>
+            <input type="submit" value="Add To Order">
+          </div>
+        {% endfor %}
           </div>
         </form>
       </section>
-
+    
+    
       <section id="receipt">
         <h2>Chat Cafe Receipt</h2>
         <p>Date: {{ current_date }}</p>
