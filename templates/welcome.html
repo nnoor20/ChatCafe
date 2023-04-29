@@ -28,7 +28,7 @@
       
       <section id="menu">
         <h2>Menu</h2>
-        
+        <div class="menu-grid"> 
    
           
             {% for item, data in menu.items() %}
@@ -116,7 +116,7 @@
         </table>
         
         <p>Total: $<span id="total"></span></p>
-        <p>Please enter your name and student ID below:</p>
+        <p>Please enter your name for this order:</p>
         <!-- Form for ordering items, with checkboxes generated dynamically from a menu dictionary -->
         <form method="POST" action="{{ url_for('order') }}">
           <label for="name">Name:</label>
