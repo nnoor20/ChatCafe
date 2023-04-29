@@ -55,9 +55,11 @@
               <input type="submit" value="Add To Order">
             </div>
           {% endfor %}
-        
+        </div>
+        <div class="menu-grid"> 
           {% for item, data in drinks.items() %}
           <div class="menu-item">
+            
             
             <img src="/static/menu_images/{{ item }}.png" alt="{{ item.title() }} photo">
             <div class="menu-item-info">
@@ -88,6 +90,7 @@
           </div>
         {% endfor %}
           </div>
+        </div>
         </form>
       </section>
     
