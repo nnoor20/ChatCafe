@@ -126,7 +126,9 @@
           <input type="text" name="name" id="name"><br>
           <label for="student_id">Student ID:</label>
           <input type="text" name="student_id" id="student_id"><br><br>
+          <input type="hidden" name="total_price1" id="total_price1" value="{{ total_price }}">
           <button type="submit" id="place-order-button">Place Order</button>
+        </form>
       </section>
 
 
@@ -152,5 +154,12 @@
     
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 
+    <script>
+      document.getElementById('place-order-button').addEventListener('click', function() {
+        let totalElement = document.getElementById('total');
+        let totalValue = totalElement.textContent;
+        document.getElementById('total_price1').value = totalValue;
+      });
+    </script>
   </body>
 </html>

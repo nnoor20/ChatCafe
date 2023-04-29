@@ -38,8 +38,7 @@ def order():
     message = ''
     if request.method == 'POST':
         items = request.form.getlist('items')
-        total_price = sum([menu[item]['price'] for item in items])
-        message = f'Thank you for you order, {request.form["name"]}, ({request.form["student_id"]})! Your order has been placed. Your total is ${total_price:.2f}.'
+        message = f'Thank you for you order, {request.form["name"]}, ({request.form["student_id"]})! Your order has been placed. Your total is ${request.form["total_price1"]}.'
     return render_template('order.html', menu=menu, drinks=drinks, message=message, items=items)
 
 
