@@ -27,12 +27,12 @@ drinks = {
 
 # Welcome page
 @app.route('/')
-def home():
+def welcome():
     return render_template('home.html')
 
 # Welcome page
-@app.route('/welcome')
-def welcome():
+@app.route('/cafe')
+def cafe():
     return render_template('welcome.html', menu=menu, drinks=drinks)
 
 
@@ -119,5 +119,4 @@ def disconnect():
 
 
 # Run app
-if __name__ == '__main__':
-    socketio.run(app, debug=True)
+if __name__ == '__main__':    socketio.run(app, debug=True)
