@@ -29,7 +29,8 @@
       <section id="menu">
         <h2>Menu</h2>
         
-          <div class="menu-grid">
+   
+          
             {% for item, data in menu.items() %}
             <div class="menu-item">
               
@@ -39,7 +40,7 @@
                 <p>{{ data.description }}</p>
                 <p class="price">${{ data.price }}</p>
                 <label for="{{ item }}_quantity">Quantity:</label>
-                <input type="number" name="{{ item }}_quantity" id="{{ item }}_quantity" min="1" value="1">
+                <input type="number" name="{{ item }}_quantity" id="{{ item }}_quantity" min="0" value="0">
                 <br>
                 <label for="{{ item }}_flavor">Flavor:</label>
                 <select name="{{ item }}_flavor" id="{{ item }}_flavor">
@@ -64,7 +65,7 @@
               <p>{{ data.description }}</p>
               <p class="price">${{ data.price }}</p>
               <label for="{{ item }}_quantity">Quantity:</label>
-              <input type="number" name="{{ item }}_quantity" id="{{ item }}_quantity" min="1" value="1">
+              <input type="number" name="{{ item }}_quantity" id="{{ item }}_quantity" min="0" value="0">
               <br>
               <label for="{{ item }}_flavor">Flavor:</label>
               <select name="{{ item }}_flavor" id="{{ item }}_flavor">
@@ -81,6 +82,7 @@
                 <option value="Medium">Medium</option>
                 <option value="Large">Large</option>
               </select>
+              
             </div>
             <input type="submit" value="Add To Order">
           </div>
@@ -144,5 +146,8 @@
         <p>&copy; 2023 MSU Denver Chat Cafe</p>
       </center>
     </footer>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
   </body>
 </html>
