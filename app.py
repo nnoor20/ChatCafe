@@ -36,6 +36,7 @@ def welcome():
 @app.route('/order', methods=['GET', 'POST'])
 def order():
     message = ''
+    items = []
     if request.method == 'POST':
         items = request.form.getlist('items')
         message = f'Thank you for you order, {request.form["name"]}, ({request.form["student_id"]})! Your order has been placed. Your total is ${request.form["total_price1"]}.'
