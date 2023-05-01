@@ -19,6 +19,7 @@
 </div>
 <script type="text/javascript">
   var socketio = io();
+  socketio.connect('https://' + document.domain + ':' + location.port + '/chat');
 
   const messages = document.getElementById("messages");
 
