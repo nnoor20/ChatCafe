@@ -1,8 +1,6 @@
 {% extends 'base.html' %} {% block content %}
-<div class="welcome-message">
-  <h1>Welcome to the ChatCafe Lounge, {{ name }}!</h1>
-</div>
 <div class="message-box">
+  <h1>Welcome to the ChatCafe Lounge, {{ name }}!</h1>
   <div class="messages" id="messages"></div>
   <div class="inputs">
     <input
@@ -44,11 +42,6 @@
     socketio.emit("message", { data: message.value });
     message.value = "";
   };
-
-  socketio.on("connect", (data) => {
-    socketio.emit(data.name + " has entered the chat")
-    console.log("User joined: " + data.name)
-  });
 </script>
 {% for msg in messages %}
 <script type="text/javascript">
