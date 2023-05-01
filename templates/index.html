@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% block content %}
+
 <form method="post" class="buttons">
   <h1>Welcome to the Chat Lounge</h1>
   
@@ -8,7 +9,6 @@
       name="name"
       id="name"
     />
-    <button type="submit" name="join" class="join-btn">Enter Chat</button>
-
-</form>
+    <button type="submit" name="join" id="join-btn">Enter Chat</button>
+    
 {% endblock %}

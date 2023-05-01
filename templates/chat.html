@@ -12,7 +12,7 @@
       name="message"
       id="message"
     />
-    <button type="button" name="send" id="send-btn" onClick="sendMessage()">
+    <button type="submit" name="send" id="send-btn" onClick="sendMessage()">
       Send
     </button>
   </div>
@@ -28,6 +28,9 @@
     <div class="text">
         <span>
             <strong>${name}</strong>: ${msg}
+        </span>
+        <span class="muted">
+            ${new Date().toLocaleString()}
         </span>
     </div>
     `;
