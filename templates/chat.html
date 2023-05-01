@@ -44,6 +44,11 @@
     socketio.emit("message", { data: message.value });
     message.value = "";
   };
+
+  socketio.on("connect", (data) => {
+    socketio.emit(data.name + " has entered the chat")
+    console.log("User joined: " + data.name)
+  });
 </script>
 {% for msg in messages %}
 <script type="text/javascript">
