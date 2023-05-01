@@ -25,7 +25,7 @@ drinks = {
 
 # Welcome page
 @app.route('/')
-def welcome():
+def homepage():
     return render_template('homepage.html')
 
 # Menu page
