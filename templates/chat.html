@@ -43,9 +43,9 @@
     socketio.emit("message", { data: message.value });
     message.value = "";
   };
+
+  // Add an event listener to the "Send" button
+  const sendButton = document.getElementById("send-btn");
+  sendButton.addEventListener("click", sendMessage);
 </script>
-{% for msg in messages %}
-<script type="text/javascript">
-  createMessage("{{msg.name}}", "{{msg.message}}");
-</script>
-{% endfor %} {% endblock %}
+{% endblock %}
