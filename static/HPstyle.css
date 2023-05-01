@@ -1,0 +1,188 @@
+/* Global Styles */
+/* Set global styles for the webpage */
+body {
+    /* Set the maximum width of the page and center it horizontally */ 
+     max-width: 1200px;
+     margin: 0 auto;
+     background-color: #F7E6D1;
+     /*set background colot to a peach color */
+     font-family: Arial, sans-serif;
+     font-size: 16px;
+     line-height: 1.5;
+     /* Add padding to the left and right sides of the body */
+     padding-left: 20px;
+     padding-right: 20px;
+   }
+   
+   /* Header Styles */
+   /* Style for the header section */
+   header {
+     text-align: center;
+     background-color: #E1C3A6;
+     /* Set the background color of the header to a lighter shade of peach */
+     padding: 20px;
+     border-radius: 10px;
+     /* Add some space between the top of the header and the content above it */
+     margin-top: 30px;
+   }
+   
+   /* Style for the main heading in the header section */
+   h1 {
+     font-size: 48px;
+     margin-top: 50px;
+     /* Set the color of the heading to a dark brown */
+     color: #4E342E;
+     /* Add a slight text shadow to the heading */
+     text-shadow: 2px 2px #FFE0B2;
+   }
+   
+/* Navigation Styles /
+/ Style for the navigation bar */
+/* Navigation Styles */
+
+/* Style for the navigation bar */
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  border-radius: 25px; 
+  
+  padding: 15px; 
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 3px; 
+}
+
+/* Style for each navigation item */
+
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 2px solid #4E342E ;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+nav a:hover {
+  transform: translateY(-5px);
+}
+
+nav a .grid-item {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+nav a p {
+  margin: 0;
+  color: #4E342E;
+  font-size: 16px;
+  
+  text-shadow: 2px 2px #FFE0B2;
+}
+
+
+
+
+   
+   /* Main Styles */
+   /* Style for the main content section */
+   main {
+     text-align: center;
+   }
+   
+   .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background-color: transparent;
+    border: 5px solid #ccc;
+  }
+
+  .grid-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #4E342E;
+    border-radius: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 30px;
+    /* Set the width of each item to 100% for two items in a row */
+    width: 100%;
+  }
+
+  .grid-container a:hover img {
+    opacity: 0.7;
+    filter: grayscale(100%);
+  }
+  
+  /* Select every second child element to add a different border color */
+  .grid-container a:nth-child(2n) {
+    border-color: #FFA07A;
+  }
+
+  .grid-container a:hover {
+    background-color: #4E342E;
+  }
+  
+  img {
+    width: 200px;
+    height: auto;
+  }
+  
+  
+   /* Style for each individual section */
+   section {
+     margin-bottom: 50px;
+   }
+
+   main h2{
+    text-align: center;
+    color: #4E342E;
+   }
+
+   main p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #4E342E;
+   }
+
+   /* Footer Styles */
+   footer {
+    background-color: #F7E6D1;
+    color: #4E342E;
+    text-align: center;
+    padding: 10px;
+    }
+    
+    footer p {
+    margin: 0;
+    font-size: 16px;
+    }
+
+
+
+    
+   
+    
+    
+    
+    
