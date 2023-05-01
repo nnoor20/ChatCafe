@@ -1,8 +1,6 @@
 from flask import Flask, request, render_template, session, redirect, url_for
-from flask_socketio import SocketIO
-from flask_socketio import join_room, leave_room, send
-import random
-from string import ascii_uppercase
+from flask_socketio import SocketIO, join_room, leave_room, send, emit
+
 
 # Create app
 app = Flask(__name__)
@@ -68,9 +66,8 @@ def index():
 @app.route("/chat")
 def room():
     room = session.get("room")
-    name = session.get("name")
-    
-    return render_template("chat.html", code=room, messages=rooms[room]["messages"],name=name)
+
+    return render_template("chat.html", code=room, messages=rooms[room]["messages"])
 
 @socketio.on("message")
 def message(data):
