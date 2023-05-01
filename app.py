@@ -23,11 +23,15 @@ drinks = {
     "cappuccino": {"price": 3.49, "description": "Espresso with steamed milk and more foam than a latte"} 
 }
 
-
 # Welcome page
 @app.route('/')
 def welcome():
-    return render_template('welcome.html', menu=menu, drinks=drinks)
+    return render_template('homepage.html')
+
+# Menu page
+@app.route('/menu')
+def welcome():
+    return render_template('menu.html', menu=menu, drinks=drinks)
 
 
 # Order page
