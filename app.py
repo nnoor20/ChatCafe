@@ -29,9 +29,9 @@ def homepage():
     return render_template('homepage.html')
 
 # Menu page
-@app.route('/menu')
-def menu():
-    return render_template('menu.html', menu=menu, drinks=drinks)
+@app.route('/cafe')
+def cafe():
+    return render_template('cafe.html', menu=menu, drinks=drinks)
 
 
 # Order page
