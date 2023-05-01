@@ -66,8 +66,9 @@ def index():
 @app.route("/chat")
 def room():
     room = session.get("room")
+    name = session.get("name")
 
-    return render_template("chat.html", code=room, messages=rooms[room]["messages"])
+    return render_template("chat.html", code=room, messages=rooms[room]["messages"],name=name)
 
 @socketio.on("message")
 def message(data):
