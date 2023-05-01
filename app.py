@@ -30,7 +30,7 @@ def homepage():
 
 # Menu page
 @app.route('/menu')
-def welcome():
+def menu():
     return render_template('menu.html', menu=menu, drinks=drinks)
 
 
