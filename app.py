@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, session, redirect, url_for
 from flask_socketio import SocketIO, join_room, leave_room, send, emit
-
+from datetime import datetime
 
 # Create app
 app = Flask(__name__)
@@ -31,7 +31,8 @@ def homepage():
 # Menu page
 @app.route('/cafe')
 def cafe():
-    return render_template('cafe.html', menu=menu, drinks=drinks)
+    current_date = datetime.now()
+    return render_template('cafe.html', menu=menu, drinks=drinks, current_date=current_date.strftime('%m-%d-%Y %H:%M:%S'))
 
 
 # Order page
