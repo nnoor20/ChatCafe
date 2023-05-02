@@ -294,6 +294,7 @@ body {
   border: none;
   cursor: pointer;
   margin-top: 10px;
+  display: flex;
 }
 
 #join-btn {
