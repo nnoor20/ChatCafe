@@ -4,18 +4,20 @@
 </div>
 <div class="message-box">
   <div class="messages" id="messages"></div>
+  <form onSubmit="return false;"> 
   <div class="inputs">
-    <input
-      type="text"
-      rows="3"
-      placeholder="Message"
-      name="message"
-      id="message"
-    />
-    <button type="button" name="send" id="send-btn" onClick="sendMessage()">
-      Send
-    </button>
+      <input
+        type="text"
+        rows="3"
+        placeholder="Message"
+        name="message"
+        id="message"
+      />
+      <button type="submit" name="send" id="send-btn" onClick="sendMessage()">
+        Send
+      </button>
   </div>
+  </form>
 </div>
 <script type="text/javascript">
   var socketio = io();
@@ -28,6 +30,9 @@
     <div class="text">
         <span>
             <strong>${name}</strong>: ${msg}
+        </span>
+        <span class="muted">
+            ${new Date().toLocaleString()}
         </span>
     </div>
     `;

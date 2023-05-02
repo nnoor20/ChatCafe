@@ -1,244 +1,312 @@
 /* Global Styles */
 /* Set global styles for the webpage */
 body {
-    /* Set the maximum width of the page and center it horizontally */ 
-     max-width: 1200px;
-     margin: 0 auto;
-     background-color: #F7E6D1;
-     /*set background colot to a peach color */
-     font-family: Arial, sans-serif;
-     font-size: 16px;
-     line-height: 1.5;
-     /* Add padding to the left and right sides of the body */
-     padding-left: 20px;
-     padding-right: 20px;
-   }
-   
-   /* Header Styles */
-   /* Style for the header section */
-   header {
-     text-align: center;
-     background-color: #E1C3A6;
-     /* Set the background color of the header to a lighter shade of peach */
-     padding: 20px;
-     border-radius: 10px;
-     /* Add some space between the top of the header and the content above it */
-     margin-top: 30px;
-   }
-   
-   /* Style for the main heading in the header section */
-   h1 {
-     font-size: 48px;
-     margin-top: 50px;
-     /* Set the color of the heading to a dark brown */
-     color: #4E342E;
-     /* Add a slight text shadow to the heading */
-     text-shadow: 2px 2px #FFE0B2;
-   }
-   
-   /* Navigation Styles */
-   /* Style for the navigation bar */
-   nav {
-     display: flex;
-     justify-content: center;
-     margin-bottom: 30px;
-   }
-   
-   /* Style for the navigation links */
-   nav a {
-     display: inline-block;
-     text-align: center;
-     margin-right: 20px;
-     text-decoration: none;
-     color: #4E342E;
-     font-size: 24px;
-     text-shadow: 2px 2px #FFE0B2;
-   }
-   
-   /* Style for the navigation link when hovered over */
-   nav a:hover {
-     color: #FFA07A;
-   }
-   
-   /* Main Styles */
-   /* Style for the main content section */
-   main {
-     text-align: center;
-   }
-   
-   /* Style for each individual section */
-   section {
-     margin-bottom: 50px;
-   }
-   
-   /* Style for the heading in each individual section */
-   section h2 {
-     margin-top: 50px;
-     font-size: 36px;
-     color: #4E342E;
-     text-shadow: 2px 2px #FFE0B2;
-   }
-   
-   /* Style for forms */
-   form {
-     margin-top: 20px;
-   }
-   
-   /* Style for form labels */
-   label {
-     font-size: 24px;
-     display: block;
-     margin-top: 20px;
-     color: #4E342E;
-     text-shadow: 2px 2px #FFE0B2;
-   }
-   
-   /* Style for text input */
-   input[type="text"] {
-     padding: 10px;
-     font-size: 20px;
-     border-radius: 5px;
-     border: 1px solid #4E342E;
-     width: 100%;
-     box-sizing: border-box;
-     margin-top: 10px;
-   }
-   
-   /* Style for checkboxes */
-   input[type="checkbox"] {
-     margin-top: 20px;
-   }
-   
-   /* Style for submit button */
-   input[type="submit"] {
-     background-color: #4E342E;
-     color: white;
-     padding: 10px;
-     font-size: 24px;
-     border-radius: 5px;
-     border: none;
-     cursor: pointer;
-     margin-top: 20px;
-   }
-   
-   /* Style for submit button when hovered over */
-   input[type="submit"]:hover {
-     background-color: #FFA07A;
-   }
-   
-   /* Style for general links */
-   a {
-     display: block;
-     text-align: center;
-     margin-top: 20px;
-     font-size: 24px;
-     color: #4E342E;
-     text-shadow: 2px 2px #FFE0B2;
-   }
-   
-   /* Menu Item Styles */
-   .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
-    /*max-width: 30%;
-    display: flex;
-    flex-direction: column;*/
-  }
-/*
-  .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 20px;
-  }*/
-  
-  .menu-item {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5px;
-  }
-  
-  .menu-item img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 40%;
-    height: auto;
-    margin-bottom: 8px;
-  }
-  
-  
-  .menu-item h3 {
-    margin-top: 0;
-  }
-  
-  .menu-item p.price {
-    font-weight: bold;
-    margin-top: 8px;
-    line-height: 1;
-  }
-
-  .menu-item {
-    border: 1px solid #4E342E;
-    border-radius: 25px; /* or any other value you prefer */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px; /* decrease the padding value */
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
-    margin-bottom: 3; 
-  }
-  
-  .menu-item:hover {
-    transform: translateY(-5px);
-  }
-
-  .menu-item-info {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0; /* decrease margin-top */
-    margin-bottom: 0; /* decrease margin-bottom */
+  /* Set the maximum width of the page and center it horizontally */ 
+   max-width: 1200px;
+   margin: 0 auto;
+   background-color: #F7E6D1;
+   /*set background colot to a peach color */
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+   /* Add padding to the left and right sides of the body */
+   padding-left: 20px;
+   padding-right: 20px;
  }
+ 
+ /* Header Styles */
+ /* Style for the header section */
+ header {
+   text-align: center;
+   background-color: #E1C3A6;
+   /* Set the background color of the header to a lighter shade of peach */
+   padding: 20px;
+   border-radius: 10px;
+   /* Add some space between the top of the header and the content above it */
+   margin-top: 30px;
+ }
+ 
+ /* Style for the main heading in the header section */
+ h1 {
+   font-size: 48px;
+   margin-top: 50px;
+   /* Set the color of the heading to a dark brown */
+   color: #4E342E;
+   /* Add a slight text shadow to the heading */
+   text-shadow: 2px 2px #FFE0B2;
+ }
+ 
+ /* Navigation Styles */
+ /* Style for the navigation bar */
+ nav {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 30px;
+ }
+ 
+ /* Style for the navigation links */
+ nav a {
+   display: inline-block;
+   text-align: center;
+   margin-right: 20px;
+   text-decoration: none;
+   color: #4E342E;
+   font-size: 24px;
+   text-shadow: 2px 2px #FFE0B2;
+ }
+ 
+ /* Style for the navigation link when hovered over */
+ nav a:hover {
+   color: #FFA07A;
+ }
+ 
+ /* Main Styles */
+ /* Style for the main content section */
+ main {
+   text-align: center;
+ }
+ 
+ /* Style for each individual section */
+ section {
+   margin-bottom: 50px;
+ }
+ 
+ /* Style for the heading in each individual section */
+ section h2 {
+   margin-top: 50px;
+   font-size: 36px;
+   color: #4E342E;
+   text-shadow: 2px 2px #FFE0B2;
+ }
+ 
+ /* Style for forms */
+ form {
+   margin-top: 20px;
+ }
+ 
+ /* Style for form labels */
+ label {
+   font-size: 24px;
+   display: block;
+   margin-top: 20px;
+   color: #4E342E;
+   text-shadow: 2px 2px #FFE0B2;
+ }
+ 
+ /* Style for text input */
+ input[type="text"] {
+   padding: 10px;
+   font-size: 20px;
+   border-radius: 5px;
+   border: 1px solid #4E342E;
+   width: 100%;
+   box-sizing: border-box;
+   margin-top: 10px;
+ }
+ 
+ /* Style for checkboxes */
+ input[type="checkbox"] {
+   margin-top: 20px;
+ }
+ 
+ /* Style for submit button */
+ input[type="submit"] {
+   background-color: #4E342E;
+   color: white;
+   padding: 10px;
+   font-size: 24px;
+   border-radius: 5px;
+   border: none;
+   cursor: pointer;
+   margin-top: 20px;
+ }
+ 
+ /* Style for submit button when hovered over */
+ input[type="submit"]:hover {
+   background-color: #FFA07A;
+ }
+ 
+ /* Style for general links */
+ a {
+   display: block;
+   text-align: center;
+   margin-top: 20px;
+   font-size: 24px;
+   color: #4E342E;
+   text-shadow: 2px 2px #FFE0B2;
+ }
+ 
+ /* Menu Item Styles */
+ .menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  /*max-width: 30%;
+  display: flex;
+  flex-direction: column;*/
+}
+/*
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}*/
 
- .menu-item-info p {
-    font-size: 15px;
-    margin: 0; /* remove any default margin on the p element */
-  }
+.menu-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
 
-  .receipt-grid {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
-  }
-  /* Receipt */
-  #receipt {
-    padding: 20px;
-    margin-top: 50px;
-    border: 1px solid #4E342E;
-    border-radius: 5px;
-    background-color: #fff;
-  }
+.menu-item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+
+.menu-item h3 {
+  margin-top: 0;
+}
+
+.menu-item p.price {
+  font-weight: bold;
+  margin-top: 8px;
+  line-height: 1;
+}
+
+.menu-item {
+  border: 1px solid #4E342E;
+  border-radius: 25px; /* or any other value you prefer */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* decrease the padding value */
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 3; 
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0; /* decrease margin-top */
+  margin-bottom: 0; /* decrease margin-bottom */
+}
+
+.menu-item-info p {
+  font-size: 15px;
+  margin: 0; /* remove any default margin on the p element */
+}
+
+.receipt-grid {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+/* Receipt */
+#receipt {
+  padding: 20px;
+  margin-top: 50px;
+  border: 1px solid #4E342E;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+#receipt table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#receipt #total {
+  font-weight: bold;
+}
+
+#place-order-button {
+  background-color: #4E342E;
+   color: white;
+   padding: 10px;
+   font-size: 18px;
+   border-radius: 3px;
+   border: none;
+   cursor: pointer;
+   margin-top: 20px;
+}
+
+.message-box {
+  border: 1px solid #4E342E;
+  border-radius: 25px; /* or any other value you prefer */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* decrease the padding value */
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  align-items: stretch;
+  position: relative;
+}
+
+.messages {
+  overflow-y: scroll;
+  flex: 1;
+  width: 100%;
+}
+
+#message {
+  flex: 1;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.inputs {
+  padding: 10px;
+  display: flex;
+}
+
+.muted {
+  font-size: 10px;
+  color: darkgray;
+}
+
+#send-btn {
+  background-color: #4E342E;
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+}
+
+#join-btn {
+  background-color: #4E342E;
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
   
-  #receipt table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-
-  #receipt #total {
-    font-weight: bold;
-  }
-  
-  #place-order-button {
-    background-color: #4E342E;
-     color: white;
-     padding: 10px;
-     font-size: 18px;
-     border-radius: 3px;
-     border: none;
-     cursor: pointer;
-     margin-top: 20px;
-  }
