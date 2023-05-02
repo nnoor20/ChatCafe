@@ -33,17 +33,16 @@ class TestFlaskApp(unittest.TestCase):
         response = self.app.get('/index')
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Enter your username', response.data)
-
-  def test_connect_and_send_message(self):
+        
+    def test_connect_and_send_message(self):
         self.socketio_test_client.connect()
-        time.sleep(2)  # Increase sleep time to ensure connection is established
+        time.sleep(2)
         print("Connected:", self.socketio_test_client.is_connected())
         response = self.socketio_test_client.emit('message', {'data': 'Hello, world!'})
-
+        
     def test_disconnect(self):
         self.socketio_test_client.connect()
         self.socketio_test_client.disconnect()
-
         response = self.socketio_test_client.is_connected()
         self.assertFalse(response)
 
