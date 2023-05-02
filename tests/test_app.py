@@ -36,9 +36,11 @@ class TestFlaskApp(unittest.TestCase):
 
     def test_connect_and_send_message(self):
         self.socketio_test_client.connect()
+        
         # Increase sleep time to ensure connection is established
         time.sleep(2)
         print("Connected:", self.socketio_test_client.is_connected())
+
         response = self.socketio_test_client.emit('message', {'data': 'Hello, world!'})
         received = self.socketio_test_client.get_received()
 
