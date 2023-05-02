@@ -13,7 +13,7 @@ class TestFlaskApp(unittest.TestCase):
     def test_welcome(self):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'MSU Denver Chat Cafe', response.data)
+        self.assertIn(b'Welcome to the MSU Denver Student App!', response.data)
 
     def test_order_get(self):
         response = self.app.get('/order')
@@ -35,10 +35,10 @@ class TestFlaskApp(unittest.TestCase):
         self.assertIn(b'Enter your username', response.data)
         
     def test_connect_and_send_message(self):
-        self.socketio_test_client.connect()
-        time.sleep(2)
-        print("Connected:", self.socketio_test_client.is_connected())
-        response = self.socketio_test_client.emit('message', {'data': 'Hello, world!'})
+        self.socketio_test_client.connect()
+        time.sleep(2)
+        print("Connected:", self.socketio_test_client.is_connected())
+        response = self.socketio_test_client.emit('message', {'data': 'Hello, world!'})
         
     def test_disconnect(self):
         self.socketio_test_client.connect()
