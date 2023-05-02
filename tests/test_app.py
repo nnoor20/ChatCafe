@@ -35,10 +35,11 @@ class TestFlaskApp(unittest.TestCase):
         self.assertIn(b'Enter your username', response.data)
 
     def test_connect_and_send_message(self):
-        self.socketio_test_client.connect(namespace='/chat')
-        time.sleep(0.5)
-        print("Connected:", self.socketio_test_client.is_connected(namespace='/chat'))  # Add this line
-        response = self.socketio_test_client.emit('message', {'data': 'Hello, world!'}, namespace='/chat')
+        self.socketio_test_client.connect()
+        # Increase sleep time to ensure connection is established
+        time.sleep(2)
+        print("Connected:", self.socketio_test_client.is_connected())
+        response = self.socketio_test_client.emit('message', {'data': 'Hello, world!'})
         received = self.socketio_test_client.get_received()
 
         self.assertEqual(len(received), 1)
