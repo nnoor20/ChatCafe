@@ -1,10 +1,10 @@
-# CS 3250 Final Project 
+# CS 3250 Final Project: MSU Denver Student App
 
 [![Python application](https://github.com/cs3250-final-team-5/cs3250-final-team-5/actions/workflows/python-app.yml/badge.svg)](https://github.com/cs3250-final-team-5/cs3250-final-team-5/actions/workflows/python-app.yml)
 
 # MSU Denver Chat Cafe 
 
-Welcome to the MSU Denver Chat Cafe! This application provides a range of features designed to enhance the experience of MSU denver students. It offers various functionalities such as a Cafe, Chat, Schedule (coming soon), and Event Calendar (coming soon). Read this README file to understand the key features and usage of each section.
+Welcome to the MSU Denver Chat Cafe! This application provides a range of features designed to enhance the experience of MSU denver students. We developed this web app using the following frameworks, technologies, and packages: Flask, ChatGPT (3.5 and 4), Github (espcially Codespaces), Github Copilot, SocketIO, Gunicorn, Heroku, and AWS EC2. The MSU Denver Student App offers various functionalities for students such as a Cafe, Chat, Schedule (coming soon), and Event Calendar (coming soon). Read this README file to understand the key features and usage of each section. 
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ The MSU Denver Chat Cafe currently offers the following features:
 
 ## Usage
 
-This section explains how to use each feature of the Application Name.
+This section explains how to use each feature of the MSU Denver Student App.
 
 ### Cafe
 
@@ -82,8 +82,5 @@ The ChatCafe was designed and developed by the following individuals:
 - Elizabeth Matteson
 - Caiden Kopcik
 
-
-We are grateful for their contributions in creating this application for the benefit of the student community.
-
-Enjoy using the Application Name and have a great experience!
+Enjoy using the MSU Denver ChatCafe and have a great experience!
 
