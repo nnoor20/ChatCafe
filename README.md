@@ -83,7 +83,5 @@ The ChatCafe was designed and developed by the following individuals:
 - Caiden Kopcik
 
 
-We are grateful for their contributions in creating this application for the benefit of the student community.
-
-Enjoy using the Application Name and have a great experience!
+Enjoy using the MSU Denver ChatCafe and have a great experience!
 
