@@ -2,9 +2,13 @@
 
 [![Python application](https://github.com/cs3250-final-team-5/cs3250-final-team-5/actions/workflows/python-app.yml/badge.svg)](https://github.com/cs3250-final-team-5/cs3250-final-team-5/actions/workflows/python-app.yml)
 
-# MSU Denver Chat Cafe & Acknowledgements
+# MSU Denver Chat Cafe
 
-Welcome to the MSU Denver Chat Cafe! This application provides a range of features designed to enhance the experience of MSU denver students. We developed this web app using the following frameworks, technologies, and packages: Flask, ChatGPT (3.5 and 4), Github (espcially Codespaces), Github Copilot, SocketIO, Gunicorn, Heroku, and AWS EC2. The PNG graphics we used are from [Flaticon](https://flaticon.com). The MSU Denver Student App offers various functionalities for students such as a Cafe, Chat, Schedule (coming soon), and Event Calendar (coming soon). Read this README file to understand the key features and usage of each section. 
+Welcome to the MSU Denver Chat Cafe! This application provides a range of features designed to enhance the experience of MSU Denver students. The MSU Denver Student App offers various functionalities for students such as a Cafe, Chat, Schedule (coming soon), and Event Calendar (coming soon). Read this README file to understand the key features and usage of each section.
+
+## Acknowledgements
+
+We developed this web app using the following frameworks, technologies, and packages: Flask, ChatGPT (3.5 and 4), Github (especially Codespaces), Github Copilot, SocketIO, Gunicorn, Heroku, and AWS EC2. The PNG graphics we used are from [Flaticon](https://flaticon.com).
 
 ## Table of Contents
 
