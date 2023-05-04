@@ -60,19 +60,26 @@ The Event Calendar feature is also under development and will be released in a f
 
 ## Installation
 
-To use the MSU Denver ChatCafe, follow these steps:
+To use the MSU Denver ChatCafe, please follow these specific steps:
 
-1. Clone or download the application from the [repository link](https://github.com/cs3250-final-team-5/cs3250-final-team-5.git).
+1. Clone or download the application from the GitHub repository link: <https://github.com/cs3250-final-team-5/cs3250-final-team-5.git>.
+  -If you choose to clone the repository, use the command "git clone <https://github.com/cs3250-final-team-5/cs3250-final-team-5.git>" in your terminal.
 
-Make sure you have Python and pip installed on your system.
-pip install flask-socketio
+2. Ensure that you have Python (version 3.6 or later) and pip (package installer for Python) installed on your system.
+  - You can check if you have Python installed by typing "python --version" in your terminal.
+  - You can check if you have pip installed by typing "pip --version" in your terminal.
 
-3. Install any other required dependencies listed in the project's `requirements.txt` file.
+3. Install the necessary dependencies by running the command "pip install -r requirements.txt" in your terminal.
+  - This command installs all of the dependencies listed in the project's requirements.txt file.
+
 4. Configure any necessary settings or environment variables.
+  - For example, you may need to set the Flask app environment variable by running the command "export FLASK_APP=app.py" in your terminal.
+
 5. Build and run the application on your preferred platform or server.
-6. Access the application through your browser or designated client.
-run by using the code:
-python app.py
+  - To run the application locally, navigate to the directory containing the app.py file and type "python app.py" in your terminal.
+
+6. Access the application through your browser or designated client by navigating to the appropriate URL.
+  - If running the application locally, access the URL "http://localhost:5000" in your web browser.
 
 
 ## Contributors
